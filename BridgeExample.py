@@ -35,8 +35,8 @@ if __name__ == '__main__':
         try:
             for df in profile['df_list']:
                 data = fetchData(df)
-                if data and data[0]:
-                    print(df, data[0])
+                if data and (data[0] != None):
+                    print('{}: {}'.format(df, data[0]))
                     dan.push(df, data[0])
                 time.sleep(5)
         except Exception as e:
